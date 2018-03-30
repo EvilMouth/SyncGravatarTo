@@ -13,8 +13,8 @@ import os
 class Telegram(Product):
     def __init__(self):
         super().__init__('telegram')
-        self.api_id = self.get_property()['api_id'] if self.get_property()['api_id'] else kv['telegram_api_id']
-        self.api_hash = self.get_property()['api_hash'] if self.get_property()['api_hash'] else kv['telegram_api_hash']
+        self.api_id = self.get_self_property('api_id', kv['telegram_api_id'])
+        self.api_hash = self.get_self_property('api_hash', kv['telegram_api_hash'])
 
     def sync(self):
         print('connecting telegram...')

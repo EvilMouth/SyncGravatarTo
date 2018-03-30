@@ -10,8 +10,14 @@ class Product:
     def __init__(self, name):
         self.name = name
 
-    def get_property(self):
-        return _property[self.name]
+    def get_self_property(self, key, default_value):
+        try:
+            value = _property[self.name][key]
+            if not value:
+                value = default_value
+            return value
+        except KeyError:
+            return default_value
 
     def get_email(self):
         try:

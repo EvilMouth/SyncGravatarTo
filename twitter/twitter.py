@@ -14,13 +14,10 @@ url = "https://api.twitter.com/1.1/account/update_profile_image.json"
 class Twitter(Product):
     def __init__(self):
         super().__init__('twitter')
-        consumer_key = self.get_property()['consumer_key'] if self.get_property()['consumer_key'] else kv[
-            'twitter_consumer_key']
-        consumer_secret = self.get_property()['consumer_secret'] if self.get_property()['consumer_secret'] else kv[
-            'twitter_consumer_secret']
-        token_key = self.get_property()['token_key'] if self.get_property()['token_key'] else kv['twitter_token_key']
-        token_secret = self.get_property()['token_secret'] if self.get_property()['token_secret'] else kv[
-            'twitter_token_secret']
+        consumer_key = self.get_self_property('consumer_key', kv['twitter_consumer_key'])
+        consumer_secret = self.get_self_property('consumer_secret', kv['twitter_consumer_secret'])
+        token_key = self.get_self_property('token_key', kv['twitter_token_key'])
+        token_secret = self.get_self_property('token_secret', kv['twitter_token_secret'])
         self.auth = OAuth1(consumer_key, consumer_secret, token_key, token_secret)
 
     def sync(self):
