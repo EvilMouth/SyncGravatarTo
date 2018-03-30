@@ -12,5 +12,9 @@
     "api_id": "",
     "api_hash": "",
     "email": "izyhang@qq.com"
+  },
+  "v2ex": {
+    "enable": true,
+    "a2": ""
   }
 }
