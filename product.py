@@ -9,6 +9,12 @@ with open(os.path.dirname(__file__) + '/property.json') as j:
 class Product:
     def __init__(self, name):
         self.name = name
+        self.enable = _property[self.name]['enable']
+
+    def is_enable(self):
+        if not self.enable:
+            print('%s not enable' % self.name)
+        return self.enable
 
     def get_self_property(self, key, default_value):
         try:

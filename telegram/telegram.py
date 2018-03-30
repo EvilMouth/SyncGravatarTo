@@ -17,6 +17,10 @@ class Telegram(Product):
         self.api_hash = self.get_self_property('api_hash', kv['telegram_api_hash'])
 
     def sync(self):
+        if self.is_enable():
+            self.__sync()
+
+    def __sync(self):
         print('connecting telegram...')
         session_path = os.path.dirname(__file__) + '/sgitt.session'
         client = TelegramClient(session_path, self.api_id, self.api_hash,

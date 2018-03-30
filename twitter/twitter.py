@@ -21,6 +21,10 @@ class Twitter(Product):
         self.auth = OAuth1(consumer_key, consumer_secret, token_key, token_secret)
 
     def sync(self):
+        if self.is_enable():
+            self.__sync()
+
+    def __sync(self):
         print('start sync to twitter...')
         image_url = get_image_url(self.get_email(), 400)
         path = save_image(image_url, 'twitter')

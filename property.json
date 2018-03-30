@@ -1,12 +1,14 @@
 {
   "mainEmail": "izyhang@gmail.com",
   "twitter": {
+    "enable": true,
     "consumer_key": "",
     "consumer_secret": "",
     "token_key": "",
     "token_secret": ""
   },
   "telegram": {
+    "enable": true,
     "api_id": "",
     "api_hash": "",
     "email": "izyhang@qq.com"
