@@ -1,9 +1,10 @@
 # SyncGravatarTo
 sync gravatar to ...
 
-**一键同步Gravatar头像到各大平台**
+**一键同步Gravatar头像到各平台**
 - Twitter
 - Telegram
+- v2ex
 - ...
 
 ## 使用说明
