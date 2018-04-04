@@ -4,7 +4,7 @@ sync gravatar to ...
 **一键同步Gravatar头像到各平台**
 - Twitter
 - Telegram
-- v2ex
+- V2EX（**deprecated 18/4/4**：V2EX已采用`Gravatar`为用户头像）
 - ...
 
 ## 使用说明

@@ -37,8 +37,3 @@ class Product:
     @abc.abstractmethod
     def sync(self):
         """Method that should do something."""
-
-
-if __name__ == '__main__':
-    t = Product('twitter')
-    print(t.get_email())

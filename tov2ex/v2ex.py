@@ -24,8 +24,14 @@ class V2EX(Product):
         path = save_image(image_url, 'v2ex')
         files = {'avatar': open(path, 'rb')}
         request = requests.post(url, files=files, cookies={'A2': self.a2})
+        print(request.text)
         if '当前头像' in request.text:
             print('sync to v2ex success!!!')
         else:
             print('sync to v2ex fail!!!')
         delete_image(path)
+
+
+if __name__ == '__main__':
+    v2ex = V2EX()
+    v2ex.sync()
