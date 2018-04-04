@@ -36,6 +36,11 @@ class Twitter(Product):
             print('sync to twitter fail!!!')
         delete_image(path)
 
+
+if __name__ == '__main__':
+    twitter = Twitter()
+    twitter.sync()
+
 # if __name__ == '__main__':
 #     r = requests.post("https://api.twitter.com/oauth/request_token", auth=auth)
 #     print(r.text)
