@@ -16,5 +16,11 @@
   "v2ex": {
     "enable": true,
     "a2": ""
+  },
+  "instagram": {
+    "enable": true,
+    "username": "",
+    "password": "",
+    "email": "izyhang@qq.com"
   }
 }
